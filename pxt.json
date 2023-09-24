@@ -9,7 +9,6 @@
     },
     "files": [
         "README.md",
-        "main.blocks",
         "main.ts"
     ],
     "testFiles": [
@@ -23,5 +22,12 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj",
+    "yotta": {
+        "config": {
+            "DMESG_SERIAL_DEBUG": 1,
+            "CODAL_DEBUG": 1,
+            "DEVICE_DMESG_BUFFER_SIZE": 2048
+        }
+    }
 }
