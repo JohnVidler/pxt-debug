@@ -10,6 +10,7 @@
     "files": [
         "README.md",
         "extension.ts",
+        "extension.h",
         "extension.cpp"
     ],
     "testFiles": [
