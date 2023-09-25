@@ -24,10 +24,29 @@
     ],
     "preferredEditor": "tsprj",
     "yotta": {
-        "config": {
-            "DMESG_SERIAL_DEBUG": 1,
-            "CODAL_DEBUG": 1,
-            "DEVICE_DMESG_BUFFER_SIZE": 2048
-        }
+        "userConfigs": [
+            {
+                "description": "Enable CODAL Serial Debugging",
+                "config": {
+                    "codal": {
+                        "DMESG_SERIAL_DEBUG": 1,
+                        "CODAL_DEBUG": 1,
+                        "DEVICE_DMESG_BUFFER_SIZE": 2048
+                    }
+                }
+            },
+            {
+                "description": "Enable StreamAPI debug process",
+                "config": {
+                    "codal": {
+                        "DMESG_SERIAL_DEBUG": 1,
+                        "CODAL_DEBUG": 1,
+                        "DEVICE_DMESG_BUFFER_SIZE": 2048,
+                        "CODAL_DEBUG_STREAMS_API": 1
+                    }
+                }
+            }
+        ],
+        "config": {}
     }
 }
