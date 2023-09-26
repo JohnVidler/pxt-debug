@@ -3,9 +3,7 @@
     "version": "0.0.0",
     "description": "",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
@@ -24,24 +22,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj",
-    "yotta": {
-        "userConfigs": [
-            {
-                "description": "Enable CODAL DMESG serial output",
-                "config": {
-                    "DMESG_ENABLE": 1,
-                    "DMESG_SERIAL_DEBUG": 1,
-                    "CODAL_DEBUG": 1,
-                    "DEVICE_DMESG_BUFFER_SIZE": 2048
-                }
-            },
-            {
-                "description": "Enable StreamAPI debug process",
-                "config": {
-                    "CODAL_DEBUG_STREAMS_API": 1
-                }
-            }
-        ]
-    }
+    "preferredEditor": "tsprj"
 }

@@ -60,9 +60,6 @@ namespace CODALDebug {
     void launch() {
         uBit.serial.printf( "=== DEBUG BUILD CONFIG ===\n" );
         uBit.serial.printf( "DMESG_SERIAL_DEBUG       = %d\n", DMESG_SERIAL_DEBUG );
-        uBit.serial.printf( "CODAL_DEBUG              = %d\n", CODAL_DEBUG );
-        uBit.serial.printf( "DEVICE_DMESG_BUFFER_SIZE = %d\n", DEVICE_DMESG_BUFFER_SIZE );
-        uBit.serial.printf( "CODAL_DEBUG_STREAMS_API  = %d\n", CODAL_DEBUG_STREAMS_API );
         uBit.serial.printf( "=== DEBUG BUILD CONFIG ===\n" );
         
         #if MICROBIT_CODAL && CONFIG_ENABLED(DMESG_SERIAL_DEBUG)
