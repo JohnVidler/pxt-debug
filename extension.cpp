@@ -58,14 +58,14 @@ namespace CODALDebug {
 
     //% 
     void launch() {
+        uBit.serial.printf( "=== DEBUG BUILD CONFIG ===\n" );
+        uBit.serial.printf( "DMESG_SERIAL_DEBUG       = %d\n", DMESG_SERIAL_DEBUG );
+        uBit.serial.printf( "CODAL_DEBUG              = %d\n", CODAL_DEBUG );
+        uBit.serial.printf( "DEVICE_DMESG_BUFFER_SIZE = %d\n", DEVICE_DMESG_BUFFER_SIZE );
+        uBit.serial.printf( "CODAL_DEBUG_STREAMS_API  = %d\n", CODAL_DEBUG_STREAMS_API );
+        uBit.serial.printf( "=== DEBUG BUILD CONFIG ===\n" );
+        
         #if MICROBIT_CODAL && CONFIG_ENABLED(DMESG_SERIAL_DEBUG)
-
-            DMESG( "=== DEBUG BUILD CONFIG ===" );
-            DMESG( "DMESG_SERIAL_DEBUG       = %d", DMESG_SERIAL_DEBUG );
-            DMESG( "CODAL_DEBUG              = %d", CODAL_DEBUG );
-            DMESG( "DEVICE_DMESG_BUFFER_SIZE = %d", DEVICE_DMESG_BUFFER_SIZE );
-            DMESG( "CODAL_DEBUG_STREAMS_API  = %d", CODAL_DEBUG_STREAMS_API );
-            DMESG( "=== DEBUG BUILD CONFIG ===" );
 
             #if CONFIG_ENABLED(CODAL_DEBUG_STREAMS_API)
                 create_fiber( audio_stats_fiber );

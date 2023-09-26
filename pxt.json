@@ -25,26 +25,23 @@
         "microbit"
     ],
     "preferredEditor": "tsprj",
-    "disablesVariants": [
-        "mbdal"
-    ],
     "yotta": {
         "userConfigs": [
             {
+                "description": "Enable CODAL DMESG serial output",
+                "config": {
+                    "DMESG_ENABLE": 1,
+                    "DMESG_SERIAL_DEBUG": 1,
+                    "CODAL_DEBUG": 1,
+                    "DEVICE_DMESG_BUFFER_SIZE": 2048
+                }
+            },
+            {
                 "description": "Enable StreamAPI debug process",
                 "config": {
-                    "codal": {
-                        "CODAL_DEBUG_STREAMS_API": 1
-                    }
+                    "CODAL_DEBUG_STREAMS_API": 1
                 }
             }
-        ],
-        "config": {
-            "codal": {
-                "DMESG_SERIAL_DEBUG": 1,
-                "CODAL_DEBUG": 1,
-                "DEVICE_DMESG_BUFFER_SIZE": 2048
-            }
-        }
+        ]
     }
 }
