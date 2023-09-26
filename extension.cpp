@@ -4,8 +4,7 @@
 
 using namespace pxt;
 
-// Comment changes to cause Makecode to notice the file!
-namespace PXT_Debug {
+namespace CODALDebug {
 
     void printSplitterInfo( StreamSplitter * splitter ) {
         #if MICROBIT_CODAL
@@ -50,7 +49,7 @@ namespace PXT_Debug {
     }
 
     //%
-    void streams_api_top() {
+    void launch_cpp_fibers() {
         create_fiber( PXT_Debug::audio_stats_fiber );
     }
 }
