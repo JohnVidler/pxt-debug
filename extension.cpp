@@ -24,9 +24,10 @@ namespace CODALDebug {
             }
         #endif
     }
+#endif
 
     void audio_stats_fiber() {
-        #if CONFIG_ENABLED(CODAL_DEBUG_STREAMS_API)
+        #if MICROBIT_CODAL && CONFIG_ENABLED(CODAL_DEBUG_STREAMS_API)
             extern MicroBit uBit;
 
             while( true ) {
@@ -54,11 +55,10 @@ namespace CODALDebug {
             }
         #endif
     }
-#endif
 
     //% 
     void launch() {
-        //#if MICROBIT_CODAL && CONFIG_ENABLED(DMESG_SERIAL_DEBUG)
+        #if MICROBIT_CODAL && CONFIG_ENABLED(DMESG_SERIAL_DEBUG)
 
             DMESG( "=== DEBUG BUILD CONFIG ===" );
             DMESG( "DMESG_SERIAL_DEBUG       = %d", DMESG_SERIAL_DEBUG );
@@ -71,6 +71,6 @@ namespace CODALDebug {
                 create_fiber( audio_stats_fiber );
             #endif
             
-        //#endif
+        #endif
     }
 }
