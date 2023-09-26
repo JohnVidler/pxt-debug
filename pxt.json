@@ -31,16 +31,6 @@
     "yotta": {
         "userConfigs": [
             {
-                "description": "DISABLE CODAL Serial Debugging",
-                "config": {
-                    "codal": {
-                        "DMESG_SERIAL_DEBUG": 0,
-                        "CODAL_DEBUG": 0,
-                        "DEVICE_DMESG_BUFFER_SIZE": 0
-                    }
-                }
-            },
-            {
                 "description": "Enable StreamAPI debug process",
                 "config": {
                     "codal": {
@@ -50,9 +40,11 @@
             }
         ],
         "config": {
-            "DMESG_SERIAL_DEBUG": 1,
-            "CODAL_DEBUG": 1,
-            "DEVICE_DMESG_BUFFER_SIZE": 2048
+            "codal": {
+                "DMESG_SERIAL_DEBUG": 1,
+                "CODAL_DEBUG": 1,
+                "DEVICE_DMESG_BUFFER_SIZE": 2048
+            }
         }
     }
 }
